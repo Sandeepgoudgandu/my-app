@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>User Portal</title>
-  <link rel="stylesheet" href="styles/user.css" />
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles/catalog.css" />
 </head>
 <body>
-  <h1>User Login</h1>
-  <form action="/auth/login" method="POST">
-    <label for="username">Username:</label>
-    <input id="username" name="username" type="text" required />
-
-    <label for="password">Password:</label>
-    <input id="password" name="password" type="password" required />
-
-    <button type="submit">Login</button>
+  <h1>Explore Our Products</h1>
+  <form method="GET" action="/catalog/search">
+    <input type="text" name="q" placeholder="Search products..." />
+    <button type="submit">Search</button>
   </form>
-  <p>Don't have an account? <a href="/register">Register here</a></p>
+
+  <section id="product-list">
+    <!-- Products dynamically injected here -->
+  </section>
 </body>
 </html>
+
